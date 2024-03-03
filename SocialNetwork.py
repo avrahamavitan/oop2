@@ -36,8 +36,8 @@ class SocialNetwork:
 
     def __str__(self):
         str1 = f"{self.name} social network:\n"
-        for i in self.users:
-            if i != len(self.users):
-                str1 += str(self.users[i]) + "\n"
-            str1 += str(self.users[i])
+        for i, user in enumerate(self.users):
+            str1 += f"{str(self.users[user])}"
+            if i != len(self.users) - 1:
+                str1 += "\n"
         return str1
