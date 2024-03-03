@@ -35,7 +35,9 @@ class SocialNetwork:
             print(f"{name} disconnected")
 
     def __str__(self):
-        print(f"{self.name} social network:")
+        str1 = f"{self.name} social network:\n"
         for i in self.users:
-            print(self.users[i])
-        return " "
+            if i != len(self.users):
+                str1 += str(self.users[i]) + "\n"
+            str1 += str(self.users[i])
+        return str1
